@@ -8,7 +8,7 @@ namespace GithubActionsLab
     {
         //Addition Tests
         [Test]
-        public void Add_Valid()
+        public void Add_Valid_Allen()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -16,7 +16,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Add_Invalid_Allen()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -24,7 +24,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Null()
+        public void Add_Null_Allen()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
@@ -33,7 +33,7 @@ namespace GithubActionsLab
 
         // Subtraction Tests
         [Test]
-        public void Sub_Valid()
+        public void Sub_Valid_Allen()
         {
             Assert.AreEqual(1, Program.Subtract("2", "1"));
             Assert.AreEqual(8, Program.Subtract("10", "2"));
@@ -41,7 +41,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Sub_Invalid()
+        public void Sub_Invalid_Allen()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
             Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
@@ -49,7 +49,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Sub_Null()
+        public void Sub_Null_Allen()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
@@ -58,7 +58,7 @@ namespace GithubActionsLab
 
         // Multiplication Tests
         [Test]
-        public void Mul_Valid()
+        public void Mul_Valid_Allen()
         {
             Assert.AreEqual(2, Program.Multiply("2", "1"));
             Assert.AreEqual(20, Program.Multiply("10", "2"));
@@ -66,7 +66,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Mul_Invalid()
+        public void Mul_Invalid_Allen()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
             Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
@@ -74,7 +74,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Mul_Null()
+        public void Mul_Null_Allen()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
@@ -83,7 +83,7 @@ namespace GithubActionsLab
 
         // Multiplication Tests
         [Test]
-        public void Div_Valid()
+        public void Div_Valid_Allen()
         {
             Assert.AreEqual(2, Program.Divide("2", "1"));
             Assert.AreEqual(5, Program.Divide("10", "2"));
@@ -91,7 +91,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Div_Invalid()
+        public void Div_Invalid_Allen()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
             Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
@@ -99,7 +99,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Div_Null()
+        public void Div_Null_Allen()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -108,15 +108,15 @@ namespace GithubActionsLab
 
         // Power Tests
         [Test]
-        public void Pow_Valid()
+        public void Pow_Valid_Allen()
         {
             Assert.AreEqual(2, Program.Power("2", "1"));
             Assert.AreEqual(100, Program.Power("10", "2"));
-            Assert.AreEqual(0, Program.Power("5", "0"));
+            Assert.AreEqual(1, Program.Power("5", "0"));
         }
 
         [Test]
-        public void Pow_Invalid()
+        public void Pow_Invalid_Allen()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -124,7 +124,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Pow_Null()
+        public void Pow_Null_Allen()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
